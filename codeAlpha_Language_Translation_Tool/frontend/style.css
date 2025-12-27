@@ -1,0 +1,179 @@
+/* Root Variables */
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --primary: #2563eb;
+  --border: #d1d5db;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #020617;
+  --text: #e5e7eb;
+  --border: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background:var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: var(--card);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+/* Layout */
+.app-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  max-width: 480px;
+  margin: auto;
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Textareas */
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  margin-top: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Language row */
+.lang-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+/* Swap button */
+.swap-btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Translate */
+.primary-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Loader */
+.loader {
+  margin: 14px auto;
+  width: 32px;
+  height: 32px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #16a34a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+/* Error */
+#error {
+  text-align: center;
+  color: #dc2626;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Language Translator</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Dark Mode Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()">
+  <i class="fa-solid fa-moon"></i>
+</button>
+
+<div class="app-container">
+  <div class="card">
+
+    <h1><i class="fa-solid fa-globe"></i> Language Translator</h1>
+
+    <textarea id="inputText" placeholder="Enter text..."></textarea>
+
+    <!-- Language Controls -->
+    <div class="lang-row">
+      <select id="sourceLang">
+        <option value="en">English</option>
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+        <option value="fr">French</option>
+      </select>
+
+      <button class="swap-btn" onclick="swapLanguages()">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+
+      <select id="targetLang">
+        <option value="ta">Tamil</option>
+        <option value="hi">Hindi</option>
+        <option value="fr">French</option>
+        <option value="en">English</option>
+        <option value=""en">Japanese</option>
+      </select>
+    </div>
+
+    <!-- Translate -->
+    <button class="primary-btn" onclick="translateText()">
+      <i class="fa-solid fa-language"></i> Translate
+    </button>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden"></div>
+
+    <textarea id="outputText" placeholder="Translated text..." readonly></textarea>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button onclick="copyText()"><i class="fa-solid fa-copy"></i> Copy</button>
+      <button onclick="speakText()"><i class="fa-solid fa-volume-high"></i> Speak</button>
+    </div>
+
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast">Translation successful ✔</div>
+
+<script src="script.js"></script>
+</body>
+</html>
