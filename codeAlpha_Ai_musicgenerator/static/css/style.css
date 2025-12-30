@@ -1,0 +1,60 @@
+/* ===== Theme Variables ===== */
+:root {
+    --bg-dark: #0f172a;
+    --card-dark: #1e293b;
+    --text-dark: #e5e7eb;
+
+    --bg-light: #f8fafc;
+    --card-light: #ffffff;
+    --text-light: #111827;
+}
+
+/* ===== Global ===== */
+body {
+    transition: background 0.3s, color 0.3s;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.theme-dark {
+    background: linear-gradient(120deg, #020617, #020617);
+    color: var(--text-dark);
+}
+
+.theme-light {
+    background: linear-gradient(120deg, #e0f2fe, #f8fafc);
+    color: var(--text-light);
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* ===== Card ===== */
+.music-card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+}
+
+.theme-dark .music-card {
+    background: var(--card-dark);
+}
+
+.theme-light .music-card {
+    background: var(--card-light);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Music Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="theme-dark">
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <span class="brand">🎵 Music Generator</span>
+    <button id="themeToggle" class="theme-toggle">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+</div>
+
+<!-- Main Card -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="music-card shadow-lg p-4">
+
+        <h3 class="text-center fw-bold mb-3">AI Music Generator</h3>
+        <p class="text-center opacity-75 mb-4">LSTM-based Music Generation</p>
+
+        <!-- Upload -->
+        <div class="mb-3">
+            <label class="form-label">Upload MIDI Files</label>
+            <input type="file" class="form-control" id="midiFiles" multiple>
+        </div>
+
+        <!-- Controls -->
+        <div class="mb-3">
+            <label class="form-label">Music Length: <span id="lengthValue">30</span> sec</label>
+            <input type="range" class="form-range" id="musicLength" min="10" max="60" value="30">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tempo</label>
+            <select class="form-select" id="tempo">
+                <option value="slow">Slow</option>
+                <option value="medium" selected>Medium</option>
+                <option value="fast">Fast</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" onclick="uploadMidi()">Upload MIDI</button>
+            <button class="btn btn-warning" onclick="trainModel()" id="trainBtn">Train Model</button>
+            <button class="btn btn-success" onclick="generateMusic()" id="generateBtn">Generate Music</button>
+            <a href="/download" class="btn btn-dark">Download Music</a>
+        </div>
+
+        <!-- Loader -->
+        <div class="text-center mt-3">
+            <div id="loader" class="spinner-border d-none"></div>
+        </div>
+
+        <!-- Status -->
+        <p id="status" class="text-center mt-3 fw-semibold"></p>
+
+        <!-- Audio Player -->
+        <audio id="audioPlayer" controls class="w-100 mt-2 d-none"></audio>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
