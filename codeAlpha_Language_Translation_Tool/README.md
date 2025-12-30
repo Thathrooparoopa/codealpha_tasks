@@ -77,11 +77,13 @@ POST /translate
 {
   "translatedText": "Bonjour"
 }
-📸 Screenshots
-/screenshots
-* light-mode.png
-* dark-mode.png
-* translation-example.png
+
+ ## 📸 Screenshots
+
+![Light Mode](frontend/screenshots/light-mode.png)
+![Dark Mode](frontend/screenshots/dark-mode.png)
+![Translation Example](frontend/screenshots/translation-example.png)
+
 
 👨‍💻 Author
 
