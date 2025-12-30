@@ -177,3 +177,8 @@ select {
   text-align: center;
   color: #dc2626;
 }
+body {
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("assets/background.jpg") no-repeat center center/cover;
+}
