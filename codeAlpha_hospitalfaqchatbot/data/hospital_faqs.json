@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What are OPD timings?",
+    "answer": "OPD services are available from 9:00 AM to 5:00 PM, Monday to Saturday."
+  },
+  {
+    "question": "Is OPD open on Sunday?",
+    "answer": "No, OPD services are closed on Sundays except for emergency cases."
+  },
+  {
+    "question": "Is emergency service available 24/7?",
+    "answer": "Yes, emergency services are available 24/7."
+  },
+  {
+    "question": "Do you provide ambulance services?",
+    "answer": "Yes, ambulance services are available on request."
+  },
+  {
+    "question": "How can I book an appointment?",
+    "answer": "Appointments can be booked online or at the hospital reception."
+  },
+  {
+    "question": "Do you accept insurance?",
+    "answer": "Yes, we accept major health insurance providers."
+  }
+]

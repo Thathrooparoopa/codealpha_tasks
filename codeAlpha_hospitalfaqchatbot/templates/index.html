@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital FAQ Chatbot</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h1>🏥 HealthBot</h1>
+        <p>Your Hospital FAQ Assistant</p>
+
+        <div class="info-box">
+            💡 Ask about OPD, Emergency, Insurance, ICU, Appointments.
+        </div>
+    </aside>
+
+    <!-- Chat Section -->
+    <main class="chat-area">
+
+        <!-- HEADER WITH DARK MODE -->
+        <header class="chat-header">
+            <span>Hospital / Healthcare FAQ Chatbot</span>
+            <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+        </header>
+
+        <!-- CHAT BOX -->
+        <section id="chat-box">
+
+            <div class="bot-msg">
+                👋 Hello! I’m your hospital assistant.<br>
+                How can I help you today?
+            </div>
+
+            <!-- TYPING INDICATOR -->
+            <div id="typing-indicator" class="typing hidden">
+                🤖 Bot is typing<span>.</span><span>.</span><span>.</span>
+            </div>
+
+        </section>
+
+        <!-- AUTO SUGGESTIONS -->
+        <div id="suggestions" class="suggestions hidden"></div>
+
+        <!-- INPUT AREA -->
+        <footer class="chat-input">
+
+            <!-- EMOJI PICKER -->
+            <div class="emoji-picker">
+                <span onclick="addEmoji('😊')">😊</span>
+                <span onclick="addEmoji('😄')">😄</span>
+                <span onclick="addEmoji('🙏')">🙏</span>
+                <span onclick="addEmoji('😷')">😷</span>
+                <span onclick="addEmoji('🏥')">🏥</span>
+                <span onclick="addEmoji('💊')">💊</span>
+                <span onclick="addEmoji('🚑')">🚑</span>
+                <span onclick="addEmoji('❤️')">❤️</span>
+            </div>
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Type your question here..."
+                onkeydown="if(event.key==='Enter'){sendMessage()}"
+            />
+
+            <button onclick="sendMessage()">Send</button>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
