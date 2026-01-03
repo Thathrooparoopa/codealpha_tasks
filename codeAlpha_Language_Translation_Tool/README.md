@@ -56,7 +56,7 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ▶️ Running the Project
 ## Start Flask Backend
-python app.py
+python app.py in backend folder
 Backend will run at:
 http://127.0.0.1:5000
 ▶️ Run Frontend
