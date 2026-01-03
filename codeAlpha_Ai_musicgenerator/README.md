@@ -84,3 +84,9 @@ http://127.0.0.1:5000
 - Proper project documentation
 # 📌 Note
 Model training may take a few minutes depending on system performance.
+
+👤 Author
+
+Name: THATHROOPA V
+Domain: Artificial Intelligence
+Internship: CodeAlpha AI Internship Program

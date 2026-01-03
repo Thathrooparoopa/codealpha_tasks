@@ -68,7 +68,9 @@ hospital_faq_chatbot/
 │       └── script.js
 │
 └── README.md
-
+|
+|___ screenshots
+|
 
 FAQ Dataset
 
@@ -86,7 +88,7 @@ Patient support services
 
 1️⃣ Clone or Download Project
 git clone <repository-url>
-cd hospital_faq_chatbot
+cd codeAlpha_hospitalfaqchatbot
 2️⃣ Create Virtual Environment
 python -m venv venv
 3️⃣ Activate Virtual Environment
@@ -118,6 +120,15 @@ python app.py
 
 Open browser and go to:
 http://127.0.0.1:5000
+
+
+screenshots
+
+autosuggestions.png
+darkmode.png
+faqchatbot.png
+homepage.png
+
 
 🧪 Sample Questions
 What are OPD timings?
